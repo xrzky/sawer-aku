@@ -37,7 +37,7 @@ export const FormUpdate = ({ id, nominal, name, email, message }) => {
         <Input
           isRequired
           variant="underlined"
-          errorMessage="Masukkan nominal yang ingin diberikan"
+          errorMessage="Masukkan nominal yang ingin diberikan minimal Rp. 1000"
           placeholder="Ketik jumlah dukungan"
           name="nominal"
           type="number"
@@ -45,6 +45,7 @@ export const FormUpdate = ({ id, nominal, name, email, message }) => {
           defaultValue={nominal}
           value={nominalValue}
           onChange={handleNominalChange}
+          min="1000"
         />
       </div>
       <p className="pl-1 font-mono">

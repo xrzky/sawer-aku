@@ -36,13 +36,14 @@ export const FormCreate = () => {
         <Input
           isRequired
           variant="underlined"
-          errorMessage="Masukkan nominal yang ingin diberikan"
+          errorMessage="Masukkan nominal yang ingin diberikan minimal Rp. 1000"
           placeholder="Ketik jumlah dukungan"
           name="nominal"
           type="number"
           className="font-mono flex-1 ml-2"
           value={nominalValue}
           onChange={handleNominalChange}
+          min="1000"
         />
       </div>
       <p className="pl-1 font-mono">

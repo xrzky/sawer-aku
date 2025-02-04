@@ -20,7 +20,7 @@ export async function createActivityAction(_, formData) {
     body: JSON.stringify([{ nominal, name, email, message, category, date }]),
   });
 
-  revalidatePath();
+  revalidatePath(`/transactions`);
 
   redirect("/");
 }

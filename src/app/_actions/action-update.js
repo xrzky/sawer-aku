@@ -27,7 +27,7 @@ export async function updateActivityAction(_, formData) {
     }),
   });
 
-  revalidatePath(`/transactions/${id}`);
+  revalidatePath("/");
 
   redirect("/");
 }

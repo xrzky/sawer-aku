@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { CardOverview } from "./_components/card-overview";
 import { DataList } from "./_components/data-list";
 import { Navbar } from "./_components/navbar";

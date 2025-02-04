@@ -27,7 +27,7 @@ export async function updateActivityAction(_, formData) {
     }),
   });
 
-  revalidatePath("/");
+  // revalidatePath("/");
 
   redirect("/");
 }

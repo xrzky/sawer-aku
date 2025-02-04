@@ -1,6 +1,7 @@
 "use server";
 
 import { API_URL } from "@/constants/api-url";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function updateActivityAction(_, formData) {
@@ -25,6 +26,8 @@ export async function updateActivityAction(_, formData) {
       date,
     }),
   });
+
+  revalidatePathth()
 
   redirect("/");
 }

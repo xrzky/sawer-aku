@@ -6,6 +6,7 @@ import { TransactionDelete } from './transaction-delete'
 export const CardData = async () => {
   const res = await fetch('https://v1.appbackend.io/v1/rows/ddsk0krRFzUf')
   const { data } = await res.json()
+
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 pt-14 sm:pt-16 ">

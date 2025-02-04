@@ -1,6 +1,7 @@
 "use server";
 
 import { API_URL } from "@/constants/api-url";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function createActivityAction(_, formData) {
@@ -18,6 +19,8 @@ export async function createActivityAction(_, formData) {
     },
     body: JSON.stringify([{ nominal, name, email, message, category, date }]),
   });
+
+  revalidatePath();
 
   redirect("/");
 }

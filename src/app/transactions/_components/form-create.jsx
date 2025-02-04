@@ -85,7 +85,7 @@ export const FormCreate = () => {
       />
       <Select
         isRequired
-        placeholder="Dukungan"
+        label="Pilih kategori"
         variant="underlined"
         name="category"
         errorMessage="Dukungan tidak boleh kosong"
